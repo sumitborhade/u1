@@ -1,0 +1,288 @@
+/*****  Common *****/
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #ddd;
+  transition: color .1s ease-in-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  /* padding-left: 10px; */
+  /* border: 1px solid black; */
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 9px 10px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*****  Header *****/
+.header-outer {
+  width: 100%;
+  background: linear-gradient(90deg, #f0027f, #75489f);
+  height: 50px;
+}
+
+.header-inner {
+  width: 100%;
+  height: 100%;
+}
+
+/** codepen ***/
+.nav {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 10px 10px 10px 0;
+  padding-left: 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  float: right;
+  /* display: inline; */
+  /* font-size: 18px; */
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 15px;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.content {
+  background: linear-gradient(90deg, #f0027f, #75489f);
+  width: 100%;
+}
+
+.heading-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #fff;
+  width: 100%;
+}
+
+.subheading-text {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.heading-image {
+  /* border: 1px solid black; */
+  /* height: 550px; */
+  background-image: url(./assets/success.png);
+  background-size: cover;
+  top:0;
+  flex: 1;
+}
+
+.content svg {
+  display: block;
+}
+
+.middle-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* margin-bottom: 50px; */
+  /* padding-top: 20px; */
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.actual-card {
+  width: 700px;
+  height: 700px;
+  box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card2 {
+  background: url("../../../assets/resume-template/resume2.jpg");
+}
+
+.card3 {
+  background: url("../../../assets/resume-template/resume3.jpg");
+}
+
+.card4 {
+  background: url("../../../assets/resume-template/resume4.jpg");
+}
+
+.card5 {
+  background: url("../../../assets/resume-template/resume5.jpg");
+}
+
+.card6 {
+  background: url("../../../assets/resume-template/resume6.jpg");
+}
+
+.card7 {
+  background: url("../../../assets/resume-template/resume7.jpg");
+}
+
+.card8 {
+  background: url("../../../assets/resume-template/resume8.jpg");
+}
+
+.card9 {
+  background: url("../../../assets/resume-template/resume9.jpg");
+}
+
+.card10 {
+  background: url("../../../assets/resume-template/resume10.jpg");
+}
+
+.card11 {
+  background: url("./assets/Experienced.png");
+}
+
+.card {
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  margin-bottom: 40px;
+  /* box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.6); */
+  border-radius: 5px;
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* padding-top: 10px; */
+  margin-top: 1px;
+}
+
+@media (max-width:450px) {
+  .sub-heading {
+    text-align: center;
+  }
+  .header-outer {
+    position: fixed;
+  }
+  .nav > .nav-btn {
+    display: inline-block;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    cursor: pointer;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #f0027f, #75489f);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .content-inner {
+    padding-top: 50px;
+    width:100%;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    /* padding-left: 10px; */
+    /* border: 1px solid black; */
+  }
+}
