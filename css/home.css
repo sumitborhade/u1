@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #000;
 }
 
@@ -24,7 +24,7 @@ a {
 
 a:hover {
   color: #ddd;
-  transition: color .1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 .container {
@@ -46,19 +46,19 @@ a:hover {
 
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently 
+  supported by Chrome, Edge, Opera and Firefox */
 }
 
 /*****  Header *****/
 .header-outer {
   width: 100%;
-  background: linear-gradient(90deg, #f0027f, #75489f);
   height: 50px;
+  background: linear-gradient(90deg, #f0027f, #75489f);
 }
 
 .header-inner {
@@ -139,7 +139,7 @@ a:hover {
   /* height: 550px; */
   background-image: url(./assets/success.png);
   background-size: cover;
-  top:0;
+  top: 0;
   flex: 1;
 }
 
@@ -213,14 +213,16 @@ a:hover {
 }
 
 .sub-heading {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   /* padding-top: 10px; */
-  margin-top: 1px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #75489f;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
   .sub-heading {
     text-align: center;
   }
@@ -239,7 +241,8 @@ a:hover {
     height: 50px;
     padding: 10px;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
     cursor: pointer;
   }
   .nav > .nav-btn > label > span {
@@ -275,7 +278,7 @@ a:hover {
 
   .content-inner {
     padding-top: 50px;
-    width:100%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
