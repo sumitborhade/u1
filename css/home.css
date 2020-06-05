@@ -74,6 +74,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 1.1rem;
   /* align-self: center; */
 }
 
@@ -179,4 +180,14 @@ a:hover {
   color: #75489f;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+
+  .header-outer {
+    position: fixed;
+  }
+  .content {
+    padding-top: 60px;
+  }
 }
