@@ -80,36 +80,34 @@ a:hover {
   color: #000;
 }
 
+/***********Login *********/
 .content {
   background: linear-gradient(90deg, #f0027f, #75489f);
-  width: 100%;
   padding-top: 50px;
-  /* margin-top: 20px; */
 }
 
-.content svg {
-  display: block;
+.login-container-inner {
+  /* background-color: chartreuse; */
+  /* width: 100%; */
 }
 
 .login-form {
-  margin: auto;
-  padding: 50px 0;
   display: grid;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
-  width: 80%;
-  /* margin-top: 20px; */
+  padding: 50px 0;
+  background-color: #fff;
+  grid-template-columns: minmax(1fr, 400px);
 }
 
 .row {
-  padding: 10px 0 20px 0;
+  /* padding: 10px 0 20px 0; */
 }
 
-.row > .input >input {
-  background-color: rgb(238, 196, 255);
+input[type="email"], input[type="password"] {
   height: 30px;
-  width: 280px;
-  border: 0px;
+  width: 70vw;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 .label {
@@ -118,12 +116,16 @@ a:hover {
   color: #fff;
 }
 
+.content svg {
+  display: block;
+}
+
 @media (max-width: 600px) {
 
   .header-outer {
     position: fixed;
   }
   .content {
-    padding-top: 60px;
+    padding-top: 110px;
   }
 }
