@@ -84,6 +84,7 @@ a:hover {
 .content {
   background: linear-gradient(90deg, #f0027f, #75489f);
   padding-top: 50px;
+  border-color: 1px solid #fff;
 }
 
 .login-container-inner {
