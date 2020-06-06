@@ -103,14 +103,17 @@ a:hover {
 }
 
 .row {
-  /* padding: 10px 0 20px 0; */
+  color: #000;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 input[type="email"], input[type="password"] {
   height: 30px;
   width: 70vw;
   max-width: 400px;
-  margin-bottom: 20px;
 }
 
 .label {
