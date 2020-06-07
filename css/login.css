@@ -10,7 +10,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #5d4177;
 }
 
 .hidden {
@@ -108,7 +108,7 @@ a:hover {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 input[type="email"], input[type="password"] {
@@ -117,10 +117,49 @@ input[type="email"], input[type="password"] {
   max-width: 400px;
 }
 
-.label {
-  padding: 0 10px;
-  width: 80px;
+input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background: #f0027f;
+  border: none;
   color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline:none;
+}
+
+input[type="submit"]:hover {
+  background: #5d4177;
+}
+
+input[type="submit"]:active {
+  background: #714f91;
+}
+
+.forgot-password a {
+  font-size: 0.7rem;
+  color: #714f91;
+  float: right;
+}
+
+.forgot-password a:hover {
+  color: #f0027f;
+}
+
+.row1 {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+.label {
+  /* padding: 0 10px; */
+  /* width: 80px; */
+  color: #f0027f;
+  width: 100%;
+  height: 100%;
+  background: #5d4177;
+  display: grid;
+  align-items: center;
 }
 
 .content svg {
