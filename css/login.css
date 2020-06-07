@@ -115,6 +115,9 @@ input[type="email"], input[type="password"] {
   height: 30px;
   width: 70vw;
   max-width: 400px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
 }
 
 input[type="submit"] {
