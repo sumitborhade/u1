@@ -153,12 +153,13 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
   grid-gap: 20px;
+  column-gap: 50px;
   justify-content: center;
 }
 
 .card {
   /* width: 500px; */
-  /* margin: 20px; */
+  margin: 20px;
   /* margin-bottom: 40px; */
   border-radius: 5px;
   display: grid;
