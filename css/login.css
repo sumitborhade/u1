@@ -126,9 +126,10 @@ input[type="submit"] {
   background: #f0027f;
   border: none;
   color: #fff;
-  /* font-size: 1.1rem; */
+  font-size: 1.1rem;
   cursor: pointer;
-  /* outline:none; */
+  outline:none;
+  -webkit-appearance: none; 
 }
 
 input[type="submit"]:hover {
