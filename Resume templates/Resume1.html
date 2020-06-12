@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      :root {
+        --bold-color: rgb(102, 151, 216);
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #000;
+      }
+
+      .container {
+        margin: auto;
+        /* padding-left: 60px; */
+        padding-top: 0px;
+        width: 950px;
+        /* border: 1px solid rgb(182, 83, 248); */
+        /* height:700px; */
+        /* border: 1px solid black; */
+      }
+
+      .header {
+          background-color: rgb(104, 102, 105);
+          color: #fff;
+          padding-bottom: 40px;
+          padding-left: 20px;
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 8px;
+      }
+
+      .title {
+        padding-bottom: 4px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .phone {
+        padding-bottom: 2px;
+        font-weight: 400;
+        font-size: 15px;
+      }
+
+      .email {
+        padding-bottom: 2px;
+        font-weight: 400;
+        font-size: 15px;
+      }
+
+      .sub-topic {
+        padding-top: 30px;
+        /* margin-right: 50px; */
+        font-size: 15px;
+      }
+
+      .first-sub-topic {
+        padding-top: 0;
+        /* margin: 20px 0 0 0; */
+        font-size: 15px;
+      }
+
+      .sub-heading {
+        padding-bottom: 5px;
+        padding-left: 8px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        /* margin-right: 40px; */
+        /* border-bottom: 3px solid rgb(102, 151, 216); */
+        background-color: rgb(194, 194, 194);;
+      }
+
+      .sub-text {
+        text-align: justify;
+        margin-right: 40px;
+      }
+
+      ul > li {
+        /* padding-top: 10px; */
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: justify;
+        line-height: 2;
+      }
+
+      .col-left {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 50%;
+      }
+
+      .col-right {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 50%;
+      }
+
+      table {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        text-align: center;
+        background: #eee;
+        border: 2px solid black;
+        height: 30px;
+      }
+
+      td {
+        padding-left: 10px;
+        border: 2px solid black;
+        height: 30px;
+      }
+      .score,
+      .passing-year {
+        text-align: center;
+      }
+
+      .framework-label {
+        padding-top: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 2.3;
+      }
+      .project-details {
+        padding-top: 5px;
+        line-height: 2.3;
+      }
+
+      .project-name {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .designation {
+        padding-top: 10px;
+      }
+
+      .underline {
+        text-decoration: none;
+        border-bottom: 1.9px solid black;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .footer{ 
+        height: 40px;
+      }
+    </style>
+    <title>Experienced Template</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="name">
+          Sumit Borhade
+        </div>
+        <div class="title">
+          Fullstack Developer, Singapore
+        </div>
+
+        <div class="phone">
+          Phone: +65 8558 8665
+        </div>
+
+        <div class="email">
+          Email: borhadesumit58@gmail.com
+        </div>
+      </div>
+
+      <div class="first-sub-topic">
+        <div class="sub-heading">
+          Summary
+        </div>
+        <div class="sub-text">
+          <ul>
+            <li>
+              Results-driven Senior Developer over 10.5 years of hands on
+              experience in spearheading software design, development and
+              deployment for Banks <b>(JPMC, CS, UBS)</b>, Companies (Apple,
+              British Telecom)
+            </li>
+            <li>
+              Experience working in small to large-scale proposals and
+              preparation of software to meet the requirements
+            </li>
+            <li>
+              Self-driven, Highly motivated and team player with can do attitude
+              has demonstrated successful and timely software deliveries
+            </li>
+            <li>
+              Provided support of development practices to established DevOps
+              processes for Jules, Jenkins
+            </li>
+            <li>
+              Over 5 years of experience with various banking clients in Private
+              and Investment Banking
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-topic">
+        <div class="sub-heading">
+          Area of expertise
+        </div>
+        <div class="sub-text">
+          <div class="row-expertise">
+            <div class="col-left">
+              <ul>
+                <li>Java (v 1.8), Java EE</li>
+                <li>Spring Core, Spring MVC, Spring Boot</li>
+                <li>UI - Javascript, Angular JS/Angular and HTML</li>
+                <li>ORM – Hibernate, Spring Data JPA</li>
+              </ul>
+            </div>
+            <div class="col-right">
+              <ul>
+                <li>Restful – Spring, Jersey (JAX-RS)</li>
+                <li>Microservices –Spring Cloud, Eureka Netflix</li>
+                <li>Oracle (RDBMS), Git, Svn, Maven, Junits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-topic">
+        <div class="sub-heading">
+          Certification
+        </div>
+        <div class="sub-text">
+          <ul>
+            <li>Oracle Certified Java Programmer (Jun 2011 with no expiry )</li>
+            <li>
+              NSE's Certified in Financial Module (Nov 2013 till Nov 2017)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-topic">
+        <div class="sub-heading">
+          Achievements
+        </div>
+        <div class="sub-text">
+          <ul>
+            <li>
+              Received “Valuable Team Player” award for excellent performance in
+              project “UII”
+            </li>
+            <li>
+              Received “Cookie” award for cameo contribution to project “One
+              View”
+            </li>
+            <li>
+              Received “Star award” for excellent performance in project
+              “RUBI-OTC Clearing”
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sub-topic">
+        <div class="sub-heading">
+          Qualification
+        </div>
+        <div class="sub-text">
+          <table>
+            <tr>
+              <th>Qualification</th>
+              <th>University/College</th>
+              <th>Score</th>
+              <th>Passing Year</th>
+            </tr>
+            <tr>
+              <td>MS (Software and Telecom Engineering)</td>
+              <td>BITS, Pilani</td>
+              <td class="score">7.88</td>
+              <td class="passing-year">2011</td>
+            </tr>
+            <tr>
+              <td>B. Tech (IT)</td>
+              <td>SGGS, Nanded</td>
+              <td class="score">6.85</td>
+              <td class="passing-year">2008</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="sub-topic">
+        <div class="sub-heading">
+          JP Morgan Chase [June 2017 – Til date]
+        </div>
+        <div class="sub-text">
+          <!-- <u class="underline">Designation: Senior Associate</u> -->
+          <table>
+            <tr>
+              <th>Designation</th>
+              <th>Start</th>
+              <th>End</th>
+            </tr>
+            <tr>
+              <td>Associate</td>
+              <td class="center">Jun 2017</td>
+              <td class="center">Jan 2019</td>
+            </tr>
+            <tr>
+              <td>Senior Associate</td>
+              <td class="center">Feb 2019</td>
+              <td class="center">Till date</td>
+            </tr>
+          </table>
+        </div>
+        <div class="project-details">
+          <span class="project-name">Reference Data :</span>
+          <span class="project description"
+            >Grace is regulatory reporting strategic project. Local Reference
+            Data is core and key application in Grace Umbrella. LRD provides
+            interface to the users to create dynamic structures, data and their
+            mapping. It helps in report writing teams in numerous ways to simply
+            the data complexities. I have been involved in requirements
+            discussions, designs, development and testing the application.
+          </span>
+        </div>
+        <div class="framework">
+          <span class="framework-label">Frameworks:</span>
+          Java, REST API, Spring (Core, MVC, Boot, JPA), Hibernate,
+          Micro-services, AngularJs, Oracle
+        </div>
+      </div>
+
+      <div class="footer"></div>
+    </div>
+  </body>
+</html>

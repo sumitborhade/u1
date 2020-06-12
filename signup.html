@@ -18,7 +18,7 @@
             <a href="./index.html">SkillsEnabled</a>
           </div>
           <div class="nav-links">
-            <a href="./login.html" class="main-link">Login</a>
+            <a href="./login" class="main-link">Login</a>
           </div>
         </div>
       </div>
@@ -27,29 +27,51 @@
     <div class="content">
       <div class="container login-container-inner">
         <div class="login-form">
-          <div class="row">SIGN UP</div>
-          <div class="row">
-            <!-- <div class="label">Email</div> -->
-            <div class="input">
-              <input name="email" type="email" placeholder="Email" class="input-class"/>
+          <form (ngSubmit)="onSubmit()" #signUpForm="ngForm">
+            <div class="row">SIGN UP</div>
+            <div class="row">
+              <div class="input">
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  id="email"
+                  [(ngModel)]="model.email"
+                  #email="ngModel"
+                  class="input-class"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <!-- <div class="label">Password</div> -->
-            <div class="input">
-              <input type="password" name="password" placeholder="Password"/>
+            <div class="row">
+              <div class="input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  id="password"
+                  required
+                  [(ngModel)]="model.password"
+                  #password="ngModel"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <!-- <div class="label">Password</div> -->
-            <div class="input">
-              <input type="password" name="confirm-password" 
-              placeholder="Confirm Password"/>
+            <div class="row">
+              <div class="input">
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                  id="confirmPassword"
+                  required
+                  [(ngModel)]="model.confirmPassword"
+                  #confirmPassword="ngModel"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <input type="submit" value="Sign Up">
-          </div>
+            <div class="row">
+              <input type="submit" value="Sign Up" />
+            </div>
+          </form>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 245">
@@ -60,7 +82,5 @@
         ></path>
       </svg>
     </div>
-
-   </div>
   </body>
 </html>

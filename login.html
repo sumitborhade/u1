@@ -27,26 +27,47 @@
     <div class="content">
       <div class="container login-container-inner">
         <div class="login-form">
-          <div class="row">LOGIN</div>
-          <div class="row">
-            <div class="input">
-              <input name="email" type="email" placeholder="Email" class="input-class"/>
+          <form
+            (ngSubmit)="onSubmit()"
+            #signInForm="ngForm"
+            class="sign-in-form"
+          >
+            <div class="row">LOGIN</div>
+            <div class="row">
+              <div class="input">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  required
+                  [(ngModel)]="model.email"
+                  #email="ngModel"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <!-- <div class="label">Password</div> -->
-            <div class="input">
-              <input type="password" name="password" placeholder="Password"/>
+            <div class="row">
+              <div class="input">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                  [(ngModel)]="model.password"
+                  #password="ngModel"
+                />
+              </div>
             </div>
-          </div>
-          <div class="row row1">
-            <div class="forgot-password">
-              <a href="./forgot-password.html">Forgot Password?</a>
+            <div class="row row1">
+              <div class="forgot-password">
+                <a routerLink="/forgotPassword">Forgot Password?</a>
+              </div>
             </div>
-          </div>
-          <div class="row row1">
-            <input type="submit" value="Login">
-          </div>
+            <div class="row row1">
+              <input type="submit" value="Sign In" />
+            </div>
+          </form>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 245">
@@ -57,7 +78,5 @@
         ></path>
       </svg>
     </div>
-
-   </div>
   </body>
 </html>

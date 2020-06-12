@@ -97,10 +97,13 @@ a:hover {
 .login-form {
   display: grid;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0 40px 0;
   margin: 0 20px;
   background-color: #fff;
   grid-template-columns: minmax(1fr, 400px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+  border-radius: 5px;
 }
 
 .row {
@@ -141,6 +144,8 @@ input[type="submit"]:active {
   font-size: 0.7rem;
   color: #714f91;
   float: right;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .forgot-password a:hover {
