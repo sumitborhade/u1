@@ -13,10 +13,6 @@ body {
   color: #000;
 }
 
-.hidden {
-  /* display: none; */
-}
-
 a {
   text-decoration: none;
   color: #fff;
@@ -26,12 +22,6 @@ a {
 
 a:hover {
   transition: color 0.1s ease-in-out;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  height: 100%;
 }
 
 .dot {
@@ -53,74 +43,39 @@ a:hover {
     supported by Chrome, Edge, Opera and Firefox */
 }
 
-.header-outer {
-  width: 100%;
-  height: 60px;
-  /* background: linear-gradient(90deg, #f0027f, #75489f); */
-  background-color: #5d4177;
-}
-
-.header-inner {
+.container {
+  /* margin: 0 auto; */
+  height: 90vh;
+  padding-left: 30px;
+  padding-top: 10px;
   display: grid;
-  height: 100%;
-  justify-content: flex-start;
-}
-
-.nav-title {
-  margin: auto;
-  padding: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  /* grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); */
+  grid-template-columns: 1fr auto;
   justify-content: center;
-  font-size: 1.1rem;
-  width: inherit;
-  background-color: #300f4d;
 }
 
-.nav-title:hover {
-  background-color: #f0027f;
-}
-
-.nav-links {
-  height: 80%;
-  /* flex: 0.5; */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.nav-links > a {
-  display: flex;
-  flex-direction: column;
+.left {
+  display: grid;
   justify-content: center;
-  align-self: flex-end;
-  height: 80%;
-  /* width: 100%; */
-  padding: 0 20px;
-  border-top: 0px;
-  margin-left: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  background-color: #eee;
+  gap: 10px;
 }
 
-.nav-links > .main-link {
-  background-color: #f0027f;
-  margin-right: 10px;
+.item {
+  /* background: yellow; */
+  justify-content: center;
+  text-align: center;
+  border: 1px solid red;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.nav-links > a:hover {
-  background-color: #9b84b1;
-  color: #000;
+.label {
 }
 
-@media (max-width: 600px) {
-  .header-outer {
-    position: fixed;
-  }
-  .content {
-    padding-top: 60px;
-  }
+.right {
+  background-color: #ddd;
+  max-width: 400px;
 }
