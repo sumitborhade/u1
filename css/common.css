@@ -1,4 +1,7 @@
 /*****  Common *****/
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
   margin: 0;
@@ -44,38 +47,104 @@ a:hover {
 }
 
 .container {
-  /* margin: 0 auto; */
-  height: 90vh;
-  padding-left: 30px;
-  padding-top: 10px;
+  width: 100%;
+  margin: auto;
+  /* background: #ccc; */
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); */
-  grid-template-columns: 1fr auto;
-  justify-content: center;
 }
 
 .left {
+  width: 100%;
+  color: #aaa;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  background-color: #eee;
-  gap: 10px;
 }
 
 .item {
-  /* background: yellow; */
-  justify-content: center;
-  text-align: center;
-  border: 1px solid red;
-  width: 400px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 20px;
 }
 
-.label {
+.nav-bar {
+  grid-column: 1/3;
+  height: 40px;
+  background-color: lavender;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.item > .input > input {
+  border: 0;
+  width: 100%;
+  height: 35px;
+  background-color: rgb(249, 235, 250);
+  color: purple;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.item > .input > textarea {
+  width: 100%;
+  height: 200px;
+  background: rgb(249, 235, 250);
+  outline: none;
+  border: none;
+  resize: none;
+  color: purple;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .right {
-  background-color: #ddd;
-  max-width: 400px;
+  margin-right: 20px;
+  background-color: rgb(149, 56, 161);
+}
+
+@media(min-width: 500px) {
+  .container {
+    max-width: 700px;
+    grid-template-columns: 1fr;
+  }
+  
+  .left {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .text1 {
+    grid-column: 1/3;
+  }
+}
+
+@media(min-width: 1000px) and (max-width: 1199px){
+  .container {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left {
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .container {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 49%;
+    height: 80vh;
+  }
 }
