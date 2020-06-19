@@ -88,7 +88,7 @@ textarea:focus {
 }
 
 .item{
-  border: springgreen 1px solid;
+  /* border: springgreen 1px solid; */
 }
 
 .accordion {
@@ -149,7 +149,7 @@ textarea:focus {
 
   #section1:checked ~ .accordion_content {
     display: grid;
-    border: rgb(136, 80, 80) 1px solid;
+    /* border: rgb(136, 80, 80) 1px solid; */
     grid-template-columns: 1fr 1fr;
   }
 }
