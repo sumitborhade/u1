@@ -230,4 +230,8 @@ a:hover {
   .content {
     padding-top: 60px;
   }
+
+  .card:hover {
+    transform: scale(1); 
+  }
 }

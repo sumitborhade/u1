@@ -65,6 +65,7 @@ textarea {
   font-weight: 500;
   font-size: 1.1rem;
   height: 35px;
+  -webkit-appearance: none; 
 }
 
 input[type="button"] {
@@ -169,6 +170,28 @@ textarea:focus {
   background: rgb(223, 159, 223);
   height: 100%;
   width: 100%;
+}
+
+.with-delete-item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 90% auto;
+  border: 1px solid purple;
+}
+
+.delete-button {
+  max-height: 35px;
+  overflow: hidden;
+}
+
+.delete-button > input[type="button"] {
+  border: none;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.delete-button > input[type="button"]:hover, .delete-button > input[type="button"]:focus {
+  border: 1px solid purple
 }
 
 @media (max-width: 500px) {
