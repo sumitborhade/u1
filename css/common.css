@@ -228,14 +228,8 @@ textarea:focus {
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
     transition: max-height 0.5s ease-in;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    padding-top: 10px;
+    padding: 10px;
     border: 1px solid purple;
-    padding-bottom: 10px;
-    display: grid;
-    row-gap: 10px;
   }
 
   .accordion_content {
