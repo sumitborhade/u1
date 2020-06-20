@@ -128,10 +128,8 @@ textarea:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 20px;
   margin-right: 10px;
   margin-left: 15px;
-  border: 1px solid rgb(171, 73, 179);
 }
 
 .accordion-header {
@@ -180,11 +178,6 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .accordion {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
   .accordion-checkbox:checked ~ .accordion_content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
@@ -213,19 +206,11 @@ textarea:focus {
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 500px) and (max-width: 999px) {
   .container {
     max-width: 700px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-  }
-
-  .accordion-checkbox:checked ~ .accordion_content {
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
   }
 
   .accordion {
@@ -235,7 +220,7 @@ textarea:focus {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    row-gap: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .accordion-checkbox:checked ~ .accordion_content {
@@ -243,7 +228,7 @@ textarea:focus {
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
     transition: max-height 0.5s ease-in;
-    
+
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
@@ -254,10 +239,11 @@ textarea:focus {
     column-gap: 20px;
     padding-left: 20px;
     padding-right: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 1px solid rgb(171, 73, 179);
   }
-
+  
   .accordion_content {
     max-height: 0px;
     padding-left: 20px;
@@ -273,7 +259,8 @@ textarea:focus {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    row-gap: 20px;
+    /* row-gap: 20px; */
+    padding-top: 20px;
   }
 }
 
@@ -284,13 +271,13 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
   }
 
-  .accordion-checkbox:checked ~ .accordion_content {
-    -ms-grid-columns: 1fr;
+  .accordion {
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr;
-    padding-right: 20px;
-    /* -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px; */
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
   }
 
   .accordion-checkbox:checked ~ .accordion_content {
@@ -298,21 +285,18 @@ textarea:focus {
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
     transition: max-height 0.5s ease-in;
-    
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
     padding-left: 20px;
     padding-right: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 1px solid rgb(171, 73, 179);
+    /* margin-bottom: 20px;
+    margin-top: 10px; */
   }
-
+  
   .accordion_content {
     max-height: 0px;
     padding-left: 20px;
@@ -321,14 +305,11 @@ textarea:focus {
     -o-transition: max-height 0.5s ease-out;
     transition: max-height 0.5s ease-out;
     overflow: hidden;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    row-gap: 20px;
+    /* row-gap: 20px; */
+    padding-top: 20px;
   }
 }
 
@@ -338,7 +319,17 @@ textarea:focus {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-
+  
+  .accordion {
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding-bottom: 20px;
+  }
+  
   .accordion-checkbox:checked ~ .accordion_content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
@@ -355,8 +346,9 @@ textarea:focus {
     column-gap: 20px;
     padding-left: 20px;
     padding-right: 15px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border: 1px solid rgb(171, 73, 179);
   }
 
   .accordion_content {
