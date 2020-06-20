@@ -8,7 +8,7 @@
 /*****  Common *****/
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   color: #000;
 }
@@ -56,7 +56,7 @@ a:hover {
     supported by Chrome, Edge, Opera and Firefox */
 }
 
-input,
+input[type="text"],
 textarea {
   border: none;
   width: 100%;
@@ -65,6 +65,23 @@ textarea {
   font-weight: 500;
   font-size: 1.1rem;
   height: 35px;
+}
+
+input[type="button"] {
+  background: purple;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+  border: purple 1px solid;
+}
+
+input[type="button"]:hover,
+input[type="button"]:focus {
+  background-color: rgb(249, 235, 250);
+  color: purple;
+  border: purple 1px solid;
+  outline: none;
 }
 
 textarea {
@@ -90,8 +107,8 @@ textarea:focus {
 .left {
   width: 100%;
   color: #aaa;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px; */
+  /* padding-right: 10px; */
 }
 
 .accordions {
@@ -101,7 +118,7 @@ textarea:focus {
   grid-template-columns: 1fr;
 }
 
-.item{
+.item {
   /* border: springgreen 1px solid; */
 }
 
@@ -109,10 +126,12 @@ textarea:focus {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* padding-bottom: 20px; */
-  /* border: 1px solid purple; */
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 15px;
+  border: 1px solid rgb(171, 73, 179);
 }
 
 .accordion-header {
@@ -121,9 +140,9 @@ textarea:focus {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
+  -ms-flex-align: center;
+  align-items: center;
+  /* margin-bottom: 10px; */
   color: #fff;
 }
 
@@ -131,35 +150,10 @@ textarea:focus {
   display: none;
 }
 
-#section1:checked ~ .accordion_content {
-  max-height: 1500px;
-  -webkit-transition: max-height 0.5s ease-in;
-  -o-transition: max-height 0.5s ease-in;
-  transition: max-height 0.5s ease-in;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-
-.accordion_content {
-  max-height: 0px;
-  -webkit-transition: max-height 0.5s ease-out;
-  -o-transition: max-height 0.5s ease-out;
-  transition: max-height 0.5s ease-out;
-  overflow: hidden;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 20px;
-}
-
 .accordion-label {
   cursor: pointer;
+  font-size: 1.1rem;
+  padding-left: 10px;
 }
 
 .right {
@@ -173,6 +167,12 @@ textarea:focus {
   grid-column: 1/3;
 }
 
+.back {
+  background: rgb(223, 159, 223);
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 500px) {
   .container {
     max-width: 700px;
@@ -180,12 +180,36 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  #section1:checked ~ .accordion_content {
-    display: -ms-grid;
-    display: grid;
-    border: rgb(136, 80, 80) 1px solid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+  .accordion {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .accordion-checkbox:checked ~ .accordion_content {
+    max-height: 1500px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .accordion_content {
+    max-height: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    -webkit-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -196,14 +220,61 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  #section1:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion_content {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
   }
 
+  .accordion {
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .accordion-checkbox:checked ~ .accordion_content {
+    max-height: 1500px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .accordion_content {
+    max-height: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    -webkit-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1199px) {
@@ -213,12 +284,51 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
   }
 
-  #section1:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion_content {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -webkit-column-gap: 20px;
+    padding-right: 20px;
+    /* -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
-            column-gap: 20px;
+            column-gap: 20px; */
+  }
+
+  .accordion-checkbox:checked ~ .accordion_content {
+    max-height: 1500px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .accordion_content {
+    max-height: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    -webkit-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
   }
 }
 
@@ -229,12 +339,42 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
   }
 
-  #section1:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion_content {
+    max-height: 1500px;
+    -webkit-transition: max-height 0.5s ease-in;
+    -o-transition: max-height 0.5s ease-in;
+    transition: max-height 0.5s ease-in;
+    
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  .accordion_content {
+    max-height: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+    -webkit-transition: max-height 0.5s ease-out;
+    -o-transition: max-height 0.5s ease-out;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
   }
 
   .right {
