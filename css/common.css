@@ -201,6 +201,10 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .accordion {
+    padding-bottom: 10px;
+  }
+
   .accordion-checkbox:checked ~ .accordion_content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
@@ -209,7 +213,9 @@ textarea:focus {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
+    border: 1px solid purple;
+    padding-bottom: 10px;
   }
 
   .accordion_content {
