@@ -153,13 +153,18 @@ textarea:focus {
 
 .accordion-label:after {
     content: '+';
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
     float: right; 
     padding-right: 20px;
     font-weight: bold; 
     font-size: 1.2rem;
     background: none;
+    transition: content 5s ease-in;
     margin: 0;
+}
+
+.accordion-checkbox:checked ~ .accordion-header > .accordion-label:after {
+  content: "-";
+  transition: content 5s ease-in;
 }
 
 .accordion-checkbox {
