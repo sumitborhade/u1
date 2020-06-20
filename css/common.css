@@ -65,21 +65,26 @@ textarea {
   font-weight: 500;
   font-size: 1.1rem;
   height: 35px;
+  padding: 0;
+  margin: 0;
+  z-index: -99;
 }
 
 input[type="button"] {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   background: purple;
   border: none;
-  padding: 10px 15px;
+  padding: 5px 15px;
   color: #fff;
   cursor: pointer;
   border: purple 1px solid;
+  margin: 0;
+  /* padding: 0; */
 }
 
 input[type="button"]:hover,
 input[type="button"]:focus {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   background-color: rgb(249, 235, 250);
   color: purple;
   border: purple 1px solid;
@@ -168,31 +173,27 @@ textarea:focus {
 }
 
 .back {
-  background: rgb(223, 159, 223);
+  background: rgb(128, 11, 128);
   height: 100%;
   width: 100%;
 }
 
 .with-delete-item {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 90% auto;
-  border: 1px solid purple;
+  grid-template-columns: auto 41px;
+  /* border: 1px solid purple; */
+  height: 37px;
 }
 
-.delete-button {
-  max-height: 35px;
-  overflow: hidden;
+.with-delete-item > .label  {
+  justify-self: flex-end;
+  background: purple;
+  height: 35px;
 }
 
-.delete-button > input[type="button"] {
-  border: none;
-  font-weight: bold;
-  font-weight: 600;
-}
-
-.delete-button > input[type="button"]:hover, .delete-button > input[type="button"]:focus {
-  border: 1px solid purple
+.with-delete-item > .label > input {
+  align-self: center;
+  padding: 8px 15px;
 }
 
 @media (max-width: 500px) {
@@ -217,6 +218,8 @@ textarea:focus {
     padding-top: 10px;
     border: 1px solid purple;
     padding-bottom: 10px;
+    display: grid;
+    row-gap: 10px;
   }
 
   .accordion_content {
@@ -272,8 +275,9 @@ textarea:focus {
     padding-bottom: 20px;
     padding-top: 20px;
     border: 1px solid rgb(171, 73, 179);
+    row-gap: 15px;
   }
-  
+
   .accordion_content {
     max-height: 0px;
     padding-left: 20px;
@@ -323,10 +327,10 @@ textarea:focus {
     padding-bottom: 20px;
     padding-top: 20px;
     border: 1px solid rgb(171, 73, 179);
-    /* margin-bottom: 20px;
-    margin-top: 10px; */
+    display: grid;
+    row-gap: 20px;
   }
-  
+
   .accordion_content {
     max-height: 0px;
     padding-left: 20px;
@@ -349,7 +353,7 @@ textarea:focus {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .accordion {
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
@@ -359,13 +363,13 @@ textarea:focus {
     column-gap: 20px;
     padding-bottom: 20px;
   }
-  
+
   .accordion-checkbox:checked ~ .accordion_content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
     transition: max-height 0.5s ease-in;
-    
+
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
