@@ -212,6 +212,27 @@ textarea:focus {
   padding: 8px 15px;
 }
 
+.button-group {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+}
+
+.label > input[class="x"] {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 5px 5px;
+  height: 25px;
+}
+
+.button-group > input {
+  margin-right: 15px;
+}
+
+.divider {
+  border-bottom: 2px dotted purple;
+}
+
 @media (max-width: 500px) {
   .container {
     max-width: 700px;
@@ -230,6 +251,10 @@ textarea:focus {
     transition: max-height 0.5s ease-in;
     padding: 10px;
     border: 1px solid purple;
+  }
+  
+  .item {
+    margin-bottom: 10px;
   }
 
   .accordion_content {
