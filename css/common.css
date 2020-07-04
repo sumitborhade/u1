@@ -158,12 +158,16 @@ textarea:focus {
     font-weight: bold; 
     font-size: 1.2rem;
     background: none;
+    -webkit-transition: content 5s ease-in;
+    -o-transition: content 5s ease-in;
     transition: content 5s ease-in;
     margin: 0;
 }
 
 .accordion-checkbox:checked ~ .accordion-header > .accordion-label:after {
   content: "-";
+  -webkit-transition: content 5s ease-in;
+  -o-transition: content 5s ease-in;
   transition: content 5s ease-in;
 }
 
@@ -195,7 +199,9 @@ textarea:focus {
 }
 
 .with-delete-item {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 41px;
   grid-template-columns: auto 41px;
   /* border: 1px solid purple; */
   height: 37px;
@@ -208,13 +214,17 @@ textarea:focus {
 }
 
 .with-delete-item > .label > input {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   padding: 8px 15px;
 }
 
 .button-group {
+  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
   grid-auto-columns: max-content;
 }
 
@@ -229,9 +239,35 @@ textarea:focus {
   margin-right: 15px;
 }
 
-.divider {
-  border-bottom: 2px dotted purple;
+.pl-20{
+  padding-left: 20px;
+  /* background-color: khaki; */
 }
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.internal-accordion {
+  padding-bottom: 20px;
+  border: 1px solid purple;
+  padding-top: 10px;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.display-none{
+  display: none;
+}
+
+/* .internal-accordion:nth-child(even) {
+  background-color: rgb(214, 107, 214);
+}
+
+.internal-accordion:nth-child(odd) {
+  background-color: rgb(250, 209, 250);
+} */
 
 @media (max-width: 500px) {
   .container {
@@ -244,7 +280,7 @@ textarea:focus {
     padding-bottom: 10px;
   }
 
-  .accordion-checkbox:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion-content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
@@ -257,7 +293,7 @@ textarea:focus {
     margin-bottom: 10px;
   }
 
-  .accordion_content {
+  .accordion-content {
     max-height: 0px;
     padding-left: 20px;
     padding-right: 15px;
@@ -282,6 +318,7 @@ textarea:focus {
   }
 
   .accordion {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr;
@@ -291,7 +328,7 @@ textarea:focus {
     /* margin-bottom: 20px; */
   }
 
-  .accordion-checkbox:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion-content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
@@ -313,7 +350,7 @@ textarea:focus {
     row-gap: 15px;
   }
 
-  .accordion_content {
+  .accordion-content {
     max-height: 0px;
     padding-left: 20px;
     padding-right: 15px;
@@ -341,6 +378,7 @@ textarea:focus {
   }
 
   .accordion {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr;
@@ -349,7 +387,7 @@ textarea:focus {
     column-gap: 20px;
   }
 
-  .accordion-checkbox:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion-content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
@@ -362,11 +400,12 @@ textarea:focus {
     padding-bottom: 20px;
     padding-top: 20px;
     border: 1px solid rgb(171, 73, 179);
+    display: -ms-grid;
     display: grid;
     row-gap: 20px;
   }
 
-  .accordion_content {
+  .accordion-content {
     max-height: 0px;
     padding-left: 20px;
     padding-right: 15px;
@@ -390,6 +429,7 @@ textarea:focus {
   }
 
   .accordion {
+    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr;
@@ -399,7 +439,7 @@ textarea:focus {
     padding-bottom: 20px;
   }
 
-  .accordion-checkbox:checked ~ .accordion_content {
+  .accordion-checkbox:checked ~ .accordion-content {
     max-height: 1500px;
     -webkit-transition: max-height 0.5s ease-in;
     -o-transition: max-height 0.5s ease-in;
@@ -413,17 +453,17 @@ textarea:focus {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    padding-left: 20px;
-    padding-right: 15px;
+    /* padding-left: 20px;
+    padding-right: 15px; */
     padding-bottom: 20px;
     padding-top: 10px;
     border: 1px solid rgb(171, 73, 179);
   }
 
-  .accordion_content {
+  .accordion-content {
     max-height: 0px;
-    padding-left: 20px;
-    padding-right: 15px;
+    /* padding-left: 20px;
+    padding-right: 15px; */
     -webkit-transition: max-height 0.5s ease-out;
     -o-transition: max-height 0.5s ease-out;
     transition: max-height 0.5s ease-out;
@@ -437,6 +477,7 @@ textarea:focus {
     column-gap: 20px;
     row-gap: 20px;
   }
+
 
   .right {
     position: fixed;
