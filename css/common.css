@@ -183,7 +183,8 @@ textarea:focus {
 }
 
 .right {
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 15px;
   background-color: rgb(149, 56, 161);
 }
 
