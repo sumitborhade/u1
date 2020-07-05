@@ -140,7 +140,7 @@ textarea:focus {
 }
 
 .accordion-header {
-  background-color: purple;
+  /* background-color: purple; */
   height: 40px;
   display: -ms-grid;
   display: grid;
@@ -148,7 +148,8 @@ textarea:focus {
   -ms-flex-align: center;
   align-items: center;
   /* margin-bottom: 10px; */
-  color: #fff;
+  color: purple;
+  border: 1px solid purple;
 }
 
 .accordion-label:after {
